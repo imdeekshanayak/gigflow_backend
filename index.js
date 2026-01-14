@@ -6,6 +6,8 @@ const { Server } = require("socket.io");
 const cookieParser = require("cookie-parser");
 
 const app = express();
+app.set("trust proxy", 1);
+
 const PORT = process.env.PORT || 5000;
 
 /* =======================
