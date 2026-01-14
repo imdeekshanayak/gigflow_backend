@@ -13,7 +13,7 @@ const PORT = 5000;
 ======================= */
 app.use(
   cors({
-    origin: "https://gigflowfront.netlify.app/",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -71,5 +71,6 @@ require("./app/routes")(app);
 server.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
 
 
