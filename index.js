@@ -90,7 +90,8 @@ require("./app/routes")(app);
    Start Server
 ======================= */
 server.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
+  console.log("running");
 });
+
 
 
