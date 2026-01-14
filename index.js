@@ -71,7 +71,7 @@ io.on("connection", (socket) => {
     }
 
     socket.join(userId);
-    console.log( User ${userId} joined room);
+    
     console.log("Rooms:", [...socket.rooms]);
   });
 
@@ -92,4 +92,5 @@ require("./app/routes")(app);
 server.listen(PORT, () => {
   console.log(Server running on port ${PORT});
 });
+
 
