@@ -62,21 +62,21 @@ app.set("io", io);
    Socket Events
 ======================= */
 io.on("connection", (socket) => {
-  console.log("🔌 Socket connected:", socket.id);
+  console.log(" Socket connected:", socket.id);
 
   socket.on("join", (userId) => {
     if (!userId) {
-      console.log("⛔ join ignored: no userId");
+      console.log("join ignored: no userId");
       return;
     }
 
     socket.join(userId);
-    console.log(👤 User ${userId} joined room);
-    console.log("📦 Rooms:", [...socket.rooms]);
+    console.log( User ${userId} joined room);
+    console.log("Rooms:", [...socket.rooms]);
   });
 
   socket.on("disconnect", (reason) => {
-    console.log("❌ Socket disconnected:", socket.id, "Reason:", reason);
+    console.log("Socket disconnected:", socket.id, "Reason:", reason);
   });
 });
 
@@ -90,5 +90,6 @@ require("./app/routes")(app);
    Start Server
 ======================= */
 server.listen(PORT, () => {
-  console.log(🚀 Server running on port ${PORT});
+  console.log(Server running on port ${PORT});
 });
+
